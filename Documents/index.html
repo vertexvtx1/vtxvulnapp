@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToryLab - Inventory Management System</title>
+  <!-- favicon -->
+  <link rel="icon" href="assets/images/favicon.png" sizes="16x16" type="image/png" />
+  <!-- bootstrap 5  -->
+  <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+  <!-- fontawesome 5  -->
+  <link rel="stylesheet" href="assets/css/lib/font-awesome.css" />
+  <!-- lineawesome font -->
+  <link rel="stylesheet" href="assets/css/lib/line-awesome.css" />
+  <!-- Simplebar Js  -->
+  <link rel="stylesheet" href="assets/css/lib/simplebar.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#docNav" data-bs-offset="50">
+
+
+  <header class="mobile-header">
+    <div class="container">
+      <div class="row g-4 align-items-center justify-content-between">
+        <div class="col-6">
+          <!-- Logo  -->
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="images" class="img-fluid logo__is" />
+          </a>
+          <!-- Logo End -->
+        </div>
+        <div class="col-6">
+          <div class="text-end">
+            <button type="button" class="btn btn--sqr sidebar-toggler">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="doc">
+    <div class="doc__sidebar" id="docNav">
+      <div class="doc-logo">
+        <!-- Logo  -->
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="images" class="img-fluid logo__is" />
+        </a>
+        <!-- Logo End -->
+      </div>
+      <nav class="doc-nav" data-simplebar>
+        <ul class="list doc-nav__list">
+          <li>
+            <a href="#introduction" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="lar la-clone"></i> <span
+                  class="d-block">introduction</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#server-req" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-server"></i> <span class="d-block">server
+                  requirements</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#server-faq" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-question"></i> <span
+                  class="d-block">server FAQ</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#installation" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-cog"></i> <span class="d-block">how to
+                  install </span></span> </a>
+          </li>
+          <li>
+            <a href="#activation" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-check-circle"></i> <span
+                  class="d-block">how to activate </span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#folder" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-folder"></i> <span class="d-block">
+                  folder structure
+                </span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#admin-dashboard" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-home"></i>
+                <span class="d-block">
+                  admin dahshboard
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-product" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-product-hunt"></i>
+                <span class="d-block">Manage Product</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#warehouse" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-warehouse"></i>
+                <span class="d-block">Warehouse</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#staff" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-user"></i>
+                <span class="d-block">Staff</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#customer" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-users"></i>
+                <span class="d-block">Customer</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#supplier" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-user-friends"></i>
+                <span class="d-block">Supplier</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#purchase" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-shopping-bag"></i>
+                <span class="d-block">Purchase</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#sale" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-shopping-cart"></i>
+                <span class="d-block">Sale</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#adjustment" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-balance-scale"></i>
+                <span class="d-block">Adjustment</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#transfer" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-retweet"></i>
+                <span class="d-block">Transfer</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#expense" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-wallet"></i>
+                <span class="d-block">Expense</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-toolbox"></i>
+                <span class="d-block">general setting</span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#system-config" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-cogs"></i>
+                <span class="d-block">
+                  System configuration
+                </span>
+              </span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <div class="copyright">
+        <p class="m-0 text--white px-3 text-center">Copyright © <a href="https://viserlab.com/"
+            class="t-link t-link--canvas">ViserLab</a> 2023</p>
+      </div>
+    </div>
+    <div class="doc__body">
+      <div id="introduction" class="section--sm section--first">
+        <div class="list">
+          <div class="doc-head">
+            <div class="doc-head__content">
+              <h5 class="doc-head__title">ToryLab</h5>
+              <span class="doc-head__sub-title">
+                Inventory Management System
+              </span>
+            </div>
+          </div>
+          <div class="doc-body">
+            <ul class="list" style="--gap: 0.2rem">
+              <li><strong>Created :</strong> 2020-09-28</li>
+              <li>
+                <strong>By :</strong>
+                <a href="https://codecanyon.net/user/viserlab" class="t-link">Viserlab</a>
+              </li>
+              <li><strong>Email :</strong> <a class="t-link" href="mailto:support@viserlab.com">support@viserlab.com</a>
+              </li>
+            </ul>
+
+            <p class="mt-4 lg-text mb-1">
+              <strong>ToryLab</strong> is an inventory management software for an effective business management. It is
+              designed to track the inventory
+              records like
+              purchases, sales, expenses & keep track items stored in several warehouses. Today, Stock management has
+              become vital for the
+              survival of an organization. You may controls your costs by
+              making stock reports for analysis of your inventory.
+            </p>
+
+            <h5 class="mt-5">Key Features</h5>
+            <ul>
+              <li>Purchase & Sales order management</li>
+              <li>Purchase Return & Sales Return Management</li>
+              <li>Payment Management</li>
+              <li>Warehouses to Warehouse Transfer</li>
+              <li>Stock Adjustment System</li>
+              <li>Expense Management</li>
+              <li>Invoice & Advance Report</li>
+              <li>Supplier & Customer Management</li>
+              <li>Products, Category & Brand Management</li>
+            </ul>
+
+
+            <p class="mt-4 lg-text">
+              The documentation will help to understand the total system and we have tried to summarize the total
+            </p>
+            <blockquote class="blockquote text--accent">
+              If needed, we will update this script continuously and come with new features and security patches. We
+              will try to give the best user experience to all of our clients.
+            </blockquote>
+            <p class="mt-4 lg-text">
+              Thank you for purchasing <strong>ToryLab</strong>. If you have any questions or queries that are not
+              answered in this document, please feel free to contact us via email. We will try to respond to you as soon
+              as possible. Thank you so much.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="server-req" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Server Requirements</h5>
+                  <span class="doc-head__sub-title">
+                    All server requirements are stated bellow
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4 align-items-center">
+                <div class="col-xl-4">
+                  <div class="doc-body">
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>PHP Version 8.1</li>
+                      <li>MySQL Version 5.7+ or MariaDB version 10.2+</li>
+                      <li>BCMath PHP Extension</li>
+                      <li>Ctype PHP Extension</li>
+                      <li>cURL PHP Extension</li>
+                      <li>DOM PHP Extension</li>
+                      <li>Fileinfo PHP Extension</li>
+                      <li>GD PHP Extension</li>
+                      <li>JSON PHP Extension</li>
+                      <li>Mbstring PHP Extension</li>
+                      <li>OpenSSL PHP Extension</li>
+                      <li>PCRE PHP Extension</li>
+                      <li>PDO PHP Extension</li>
+                      <li>pdo_mysql PHP Extension</li>
+                      <li>Tokenizer PHP Extension</li>
+                      <li>XML PHP Extension</li>
+                      <li>allow_url_fopen()</li>
+                      <li>file_get_contents()</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-8">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/server.png" alt="image" class="img-fluid w-100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="server-faq" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Server FAQ</h5>
+                  <span class="doc-head__sub-title">
+                    Frequently Asked Questions About Server
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Do I need VPS or a Dedicated server to run this system?
+                    </p>
+                    <p class="m-0">
+                      No, You can run this system in a shared host as well and it will run smoothly. But if you have
+                      much traffic, you may need to upgrade your server/hosting. Our codes are highly optimized to
+                      ensure the best possible performance.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Which hosting provider should I choose for this? Do you have any suggestions?
+                    </p>
+                    <p class="m-0">
+                      You can choose any hosting provider that provides cPanel-based hosting. cPanel is not a must, but
+                      we recommend you to have cPanel-based hosting.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      I don't have cPanel, What should I do?
+                    </p>
+                    <p class="m-0">
+                      Nothing to worry about, Our system will work with any control panel but cPanel is easy to manage,
+                      for that we recommend cPanel-based hosting. Also, Our free Support is limited to cPanel-based
+                      hosting only.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Do you provide hosting as well?
+                    </p>
+                    <p class="m-0">
+                      Yes, We do. We can provide a complete solution for your hosting. We can provide <a class="t-link"
+                        href="https://viserlab.com/hosting/budget" target="_blank">budget shared hosting</a>, <a
+                        class="t-link" href="https://viserlab.com/hosting/premium" target="_blank">premium shared
+                        hosting</a>, <a class="t-link" href="https://viserlab.com/hosting/vps" target="_blank">VPS</a>,
+                      <a class="t-link" href="https://viserlab.com/hosting/dedicated" target="_blank">Dedicated
+                        servers</a>, and Cluster from various geolocation. Please contact us for more details.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="installation" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Installation</h5>
+                  <span class="doc-head__sub-title">
+                    Application Installation Process
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4 align-items-center">
+                <div class="col-xl-6">
+                  <div class="doc-body">
+                    <p class="lead">
+                      Installation is very easy with our Easy Installer. You can install yourself simply in few steps
+                      without any coding knowledge. We develop our installation system to make the installation process
+                      flawless and easy.
+                    </p>
+                    <p class="xl-text fw-md">Installation Steps:</p>
+                    <ul class="list list--base">
+                      <li>
+                        <p class="m-0">
+                          Upload the whole file to the server you have downloaded from download after purchase.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          Extract/Unzip the file and move all files in the <code>Files</code> folder to the main
+                          folder(where you want to install it). Make sure you have moved the <code>index.php</code> and
+                          <code>.htaccess</code> as well.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">Now please browse http://<code>your-site-url</code>/install/index.php and follow
+                          the process. Your system should be ready to use.
+                        </p>
+                      </li>
+                    </ul>
+
+                    <p class="xl-text mt-4">
+                      If you are still unable to install the system, please contact us. we offer free installation in
+                      cPanel-based hosting.
+                    </p>
+                    <p class="xl-text fw-md mb-2">Admin Login:</p>
+                    <ul class="list" style="--gap: 0.2rem">
+                      <li>
+                        <span class="d-block">Admin login URL is:
+                          <strong>
+                            http://<code>your-site-url</code>/admin</strong>
+                        </span>
+                      </li>
+                      <li>
+                        <strong>Username :</strong> [as_you_set_on_installation]
+                      </li>
+                      <li>
+                        <strong>Password :</strong> [as_you_set_on_installation]
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/installation.jpg" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="activation" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Activation</h5>
+                  <span class="doc-head__sub-title">
+                    Application Activation Process
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row g-4">
+            <div class="col-xl-6">
+              <div class="doc-body h-auto">
+                <p>
+                  After installing the system you need to activate it. When you visit the system, you will be able to
+                  see the activation page. Just provide this information to activate and run your system. Your provided
+                  information will send to ViserLab server to verify and we never collect any sensitive or confidential
+                  data.
+                </p>
+                <ul class="list list--base" style="--gap: 0.5rem">
+                  <li>
+                    <p class="m-0">
+                      <strong>Purchase Code:</strong> To get purchase code <a
+                        href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-"
+                        target="_blank">Click Here</a>.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      <strong>Envato Username:</strong> Your Envato username with which you bought system.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      <strong>Email:</strong> Provide your email for further communication.
+                    </p>
+                  </li>
+                </ul>
+                <p class="mt-5">
+                  <code>The purchase code(license) is for one website or domain only. Please activate the license into the correct domain(URL) to avoid any unwanted issues in the future.</code>
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="doc-body--alt t-center">
+                <img src="assets/images/activation.jpg" alt="image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="folder" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Folder Structure</h5>
+                  <span class="doc-head__sub-title">
+                    Application Folder Details
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="doc-body">
+                <p class="lead">
+                  After installation, There will be two folders and two files will be in your main folder.
+                </p>
+                <ul class="list" style="--gap: 0.3rem">
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-folder"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">assets</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-folder"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">core</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-file-code"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">.htaccess</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-file-code"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">index.php</span>
+                    </span>
+                  </li>
+                </ul>
+                <ul class="list list--base mt-4">
+                  <li>
+                    <p class="m-0">
+                      On the <strong>"assets" </strong> folder, We keep all
+                      kinds of assets like <strong>CSS, JS, Images</strong>. If
+                      you want To edit or change anything over CSS or js, please
+                      have a look at this folder.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      On the <strong>"core"</strong> folder, We keep the core of
+                      Laravel and we maintain full MVC structure on this
+                      project.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="admin-dashboard" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Admin Dashboard</h5>
+                  <span class="doc-head__sub-title"> Dashboard Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <strong>Dashboard</strong> menu, you will get an overview at a glance. You may know the
+                      total selling amount, total purchase amount, total purchase return amount, total sales return
+                      amount, and many others.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/dashboard.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="manage-product" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Manage Product</h5>
+                  <span class="doc-head__sub-title">Manage Product Overview</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+
+          <div class="doc-body h-auto">
+            <div class="row">
+              <div class="col-12">
+                <p>
+                  In the <b>Manage Product</b> menu, there are 4 submenu: Categories, Brands, Unit & Products.
+                </p>
+                <div class="row g-4">
+                  <div class="col-xl-6">
+
+                    <h6 class="mb-1"><i class="la  la-dot-circle" aria-hidden="true"></i> Categories</h6>
+                    From Category menu admin can see the list of categories. To add a new category there is an
+                    <strong>Add New</strong> button. Admin can update
+                    the category name by click on the <strong>Edit</strong> button at the right side of each category. A
+                    category can be removed permanently if no product added with that category. Admin can also search a
+                    specific category by its name.
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="doc-body--alt t-center">
+                      <img src="assets/images/categories.png" alt="image" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-4">
+                  <div class="col-xl-6">
+                    <h6 class="mb-1"><i class="la  la-dot-circle" aria-hidden="true"></i> Brands</h6>
+                    From Brand menu admin can see the list of brands. To add a new brand there is an
+                    <strong>Add New</strong> button. Admin can update the brand name by click on
+                    the <strong>Edit</strong> button at the right side of each brand. A brand can be removed permanently
+                    if no product added with that brand. Admin can also search a specific brand by its name.
+                  </div>
+
+                  <div class="col-xl-6">
+                    <div class="doc-body--alt t-center">
+                      <img src="assets/images/brands.png" alt="image" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-4">
+                  <div class="col-xl-6">
+                    <h6 class="mb-1"><i class="la  la-dot-circle" aria-hidden="true"></i> Units</h6>
+                    From Unit menu admin can see the list of unit. To add a new unit there is an
+                    <strong>Add New</strong> button. Admin can update the unit name by click on
+                    the <strong>Edit</strong> button at the right side of each unit. An unit can be removed permanently
+                    if
+                    no product added with that unit. Admin can also search a
+                    specific unit by its name.
+                  </div>
+
+                  <div class="col-xl-6">
+                    <div class="doc-body--alt t-center">
+                      <img src="assets/images/units.png" alt="image" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-4">
+                  <div class="col-xl-6">
+                    <h6 class="mb-1"><i class="la  la-dot-circle" aria-hidden="true"></i> Products</h6>
+                    From Products menu admin can see the list of products. To add a new product there is an
+                    <strong>Add New</strong> button. Admin can update the product name by click on
+                    the <strong>Edit</strong> button at the right side of each product. Admin can search a specific
+                    product by its name. Admin can download product list by click on PDF button at the Top-Right corner.
+                  </div>
+
+                  <div class="col-xl-6">
+                    <div class="doc-body--alt t-center">
+                      <img src="assets/images/products.png" alt="image" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="warehouse" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Warehouse</h5>
+                  <span class="doc-head__sub-title">Warehouse Overview</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="doc-body h-auto">
+            <div class="row">
+              <div class="col-12">
+                <div class="row g-4">
+                  <div class="col-xl-6">
+                    From Warehouse menu admin can see the warehouse list. To add a new warehouse there is an
+                    <strong>Add New</strong> button. Admin can update
+                    the warehouse name by click on the <strong>Edit</strong> button at the right side of each warehouse.
+                    A warehouse can be disabled from Edit menu.
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="doc-body--alt t-center">
+                      <img src="assets/images/warehouse.png" alt="image" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="staff" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Staff</h5>
+                  <span class="doc-head__sub-title">Staff Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+
+                      From the <b>Staff</b> menu, admin can see the staff list. Staffs have some specific access from
+                      the whole system. To add a new staff there is an
+                      <strong>Add New</strong> button. Admin can update
+                      the information of a staff by click on the <strong>Edit</strong> button at the right side of each
+                      staff. Super admin can also login as a staff.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/staffs.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="customer" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Customer</h5>
+                  <span class="doc-head__sub-title">Customer Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+
+                      From the <b>Customer</b> menu, admin can see the customer list. To add a new customer there is an
+                      <strong>Add New</strong> button. Admin can update the information of a customer by click on the
+                      <strong>Edit</strong> button at the right side of each customer.
+                    </p>
+
+                    <p>
+                      Admin can send notification to all customer by email/sms by Notification All button. Also admin is
+                      able to send notification to a specific customer from notify button.
+                    </p>
+
+                    <p>
+                      All unsettled payment (Receivable & Payable) with a customer can be clear from the
+                      <strong>Payment</strong> menu. If all payments is cleared then the payment button will be
+                      disabled.
+                    </p>
+
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/customers.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="supplier" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Supplier</h5>
+                  <span class="doc-head__sub-title">Supplier Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+
+                      From the <b>Suppler</b> menu, admin can see the supplier list. To add a new supplier there is an
+                      <strong>Add New</strong> button. Admin can update the information of a supplier by click on the
+                      <strong>Edit</strong> button at the right side of each supplier.
+                    </p>
+
+                    <p>
+                      All unsettled payment (Receivable & Payable) with a supplier can be clear from the
+                      <strong>Payment</strong> menu. If all payments is cleared then the payment button will be
+                      disabled.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/supplier.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="purchase" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Purchase</h5>
+                  <span class="doc-head__sub-title">Purchase Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>All Purchase</b> menu, admin can see the purchase list. To add a new purchase there is
+                      a
+                      <strong>Add New</strong> button. Admin can update a purchase data by click on the
+                      <strong>Edit</strong> button at the right side of each purchase. If a purchase has some returns
+                      then that purchase can't be updated.
+                    </p>
+
+                    <p>The red circle (<small><i class="fas fa-circle text-danger"></i></small>) besides invoice no.
+                      denotes that some
+                      products of that purchase has returned. Admin can search a purchase data by the invoice
+                      number or supplier name or supplier mobile number. Also admin can search purchase data by date to
+                      date.
+                    </p>
+
+                    <p>
+                    <h6>More Button:</h6>
+                    In More button you will get options: <br>
+                    * To pay the payable amount or return back the extra payment. <br>
+                    * Return purchased products to supplier. <br>
+                    * Download details as pdf
+                    </p>
+
+                    <h5>Purchases Return</h5>
+                    <p>
+                      From the <b>Purchases Return </b> menu, admin can see the purchase return list, download data as
+                      pdf, Edit purchase return data and download the details from more button.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/purchase-list.png" alt="image" class="img-fluid" />
+
+                    <img src="assets/images/purchase-return-list.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sale" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Sale</h5>
+                  <span class="doc-head__sub-title">Sale Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>All Sale</b> menu, admin can see the sales list. To add a new sale there is
+                      a
+                      <strong>Add New</strong> button. Admin can update a sale data by click on the
+                      <strong>Edit</strong> button at the right side of each sale. If a sale has some returns
+                      then that sale can't be updated.
+                    </p>
+
+                    <p>The red circle (<small><i class="fas fa-circle text-danger"></i></small>) besides invoice no.
+                      denotes that some
+                      products of that sale has returned. Admin can search a sale data by the invoice
+                      number or customer name or customer mobile number. Also admin can search sale data by date to
+                      date.
+                    </p>
+
+                    <p>
+                    <h6>More Button</h6>
+                    In More button you will get options: <br>
+                    * To receive the receivable amount or return back the extra payment. <br>
+                    * Return sold products to supplier. <br>
+                    * Download details as pdf
+                    </p>
+
+                    <h5>Sales Return</h5>
+                    <p>
+                      From the <b>Sales Return </b> menu, admin can see the sale return list, download data as
+                      pdf, Edit sale return data and download the details from more button.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/purchase-list.png" alt="image" class="img-fluid" />
+
+                    <img src="assets/images/purchase-return-list.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="adjustment" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Adjustment</h5>
+                  <span class="doc-head__sub-title">Adjustment Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Adjustment</b> menu, admin can see the list of adjustment. Admin can add new products
+                      or subtract products from stocked data. For a new adjustment there is an
+                      <strong>Add New</strong> button. Admin can update adjustment data by click on the
+                      <strong>Edit</strong> button at the right side of each adjustment.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/adjustment.png" alt="image" class="img-fluid" />
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="transfer" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Transfer</h5>
+                  <span class="doc-head__sub-title">Transfer Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Transfer</b> menu, admin can see the list of transfers. Admin can transfer products
+                      from one warehouse to another warehouse. For a new transfer there is an
+                      <strong>Add New</strong> button. Admin can update transfer data by click on the
+                      <strong>Edit</strong> button at the right side of each transfer.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/transfer.png" alt="image" class="img-fluid" />
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="expense" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Expense</h5>
+                  <span class="doc-head__sub-title">Expense Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <h5>Type</h5>
+                    <p>
+                      From the <b>Type</b> menu, admin can see the list of expense types. To add a new Expense Type
+                      there is an
+                      <strong>Add New</strong> button. Admin can update expense Type data by click on the
+                      <strong>Edit</strong> button at the right side of each expense type.
+                    </p>
+
+                    <h5>All Expense</h5>
+                    <p>
+                      From the <b>All Expense</b> menu, admin can see the list of expenses. To add a new Expense
+                      there is an
+                      <strong>Add New</strong> button. Admin can update expense data by click on the
+                      <strong>Edit</strong> button at the right side of each expense type.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/expense-list.png" alt="image" class="img-fluid" />
+                    <br>
+                    <img src="assets/images/expense.png" alt="image" class="img-fluid" />
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">General Setting</h5>
+                  <span class="doc-head__sub-title">
+                    General Settings overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      You can set the basic information of your website from the general setting.
+                    </p>
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>
+                        <p class="m-0">
+                          <strong>Site Title:</strong> The name of your company.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Currency:</strong> Name of the currency of this system.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Currency Symbol:</strong> Symbol of the currency.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Time Zone:</strong> Timezone of your application.
+                        </p>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/general-setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="system-config" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">System Configuration</h5>
+                  <span class="doc-head__sub-title">
+                    System Configuration overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      You can set the basic information of your website from the general setting.
+                    </p>
+                    <ul class="list list--base" style="--gap: 0.5rem">
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Email Notification :</strong> You can enable or disable the Email Notification system.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>SMS Notification :</strong> You can enable or disable the SMS Notification system.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/system-config.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery library -->
+  <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
+  <!-- bootstrap 5 js -->
+  <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+  <!-- Simplebar Js  -->
+  <script src="assets/js/lib/simplebar.js"></script>
+  <!-- main js -->
+  <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
