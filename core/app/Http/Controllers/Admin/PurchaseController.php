@@ -26,7 +26,6 @@ class PurchaseController extends Controller
     protected function getPurchases()
     {
         $keyword   = request()->search;
-
         $purchases = Purchase::dateFilter('purchase_date');
 
         if ($keyword) {
@@ -338,7 +337,7 @@ class PurchaseController extends Controller
     public function productSearch(Request $request)
     {
         $products = Product::select('id', 'name', 'sku', 'unit_id')
-            ->where('name', 'LIKE', "$request->keyword%")->orWhere('sku', 'LIKE', "$request->keyword%")
+            ->whereRaw("name = '$request->keyword'")
             ->with('unit:id,name')
             ->get();
 

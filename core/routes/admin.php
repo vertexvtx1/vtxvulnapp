@@ -258,21 +258,7 @@ Route::middleware(['admin'])->group(function () {
             Route::post('import', 'import')->name('import');
         });
 
-        Route::controller('GeneralSettingController')->group(function () {
-            // General Setting
-            Route::get('general-setting', 'index')->name('setting.index');
-            Route::post('general-setting', 'update')->name('setting.update');
-
-            //configuration
-            Route::get('setting/system-configuration', 'systemConfiguration')->name('setting.system.configuration');
-            Route::post('setting/system-configuration/store', 'systemConfigurationSubmit')->name('setting.system.configuration.store');
-
-            // Logo-Icon
-            Route::get('setting/logo-icon', 'logoIcon')->name('setting.logo.icon');
-            Route::post('setting/logo-icon', 'logoIconUpdate')->name('setting.logo.icon.store');
-        });
-
-
+        
         //Payment Report
         Route::controller('PaymentReportController')->name('report.payment.')->prefix('reports/payment')->group(function () {
             Route::get('supplier', 'supplierPaymentLogs')->name('supplier');
@@ -288,6 +274,20 @@ Route::middleware(['admin'])->group(function () {
             Route::get('index', 'index')->name('index');
             Route::get('pdf', 'stockPDF')->name('pdf');
             Route::get('csv', 'stockCSV')->name('csv');
+        });
+
+        Route::controller('GeneralSettingController')->group(function () {
+            // General Setting
+            Route::get('general-setting', 'index')->name('setting.index');
+            Route::post('general-setting', 'update')->name('setting.update');
+
+            //configuration
+            Route::get('setting/system-configuration', 'systemConfiguration')->name('setting.system.configuration');
+            Route::post('setting/system-configuration/store', 'systemConfigurationSubmit')->name('setting.system.configuration.store');
+
+            // Logo-Icon
+            Route::get('setting/logo-icon', 'logoIcon')->name('setting.logo.icon');
+            Route::post('setting/logo-icon', 'logoIconUpdate')->name('setting.logo.icon.store');
         });
 
 
@@ -308,25 +308,6 @@ Route::middleware(['admin'])->group(function () {
             Route::get('customer-payment', 'customerPayment')->name('customer.payment');
         });
 
-        //Notification Setting
-        Route::name('setting.notification.')->controller('NotificationController')->prefix('notification')->group(function () {
-            //Template Setting
-            Route::get('global', 'global')->name('global');
-            Route::post('global/update', 'globalUpdate')->name('global.update');
-            Route::get('templates', 'templates')->name('templates');
-            Route::get('template/edit/{id}', 'templateEdit')->name('template.edit');
-            Route::post('template/update/{id}', 'templateUpdate')->name('template.update');
-
-            //Email Setting
-            Route::get('email/setting', 'emailSetting')->name('email');
-            Route::post('email/setting', 'emailSettingUpdate')->name('email.update');
-            Route::post('email/test', 'emailTest')->name('email.test');
-
-            //SMS Setting
-            Route::get('sms/setting', 'smsSetting')->name('sms');
-            Route::post('sms/setting', 'smsSettingUpdate')->name('sms.update');
-            Route::post('sms/test', 'smsTest')->name('sms.test');
-        });
 
     });
     //System Information
@@ -337,5 +318,25 @@ Route::middleware(['admin'])->group(function () {
         Route::get('optimize-clear', 'optimizeClear')->name('optimize.clear');
         Route::get('system-update', 'systemUpdate')->name('update');
         Route::post('update-upload', 'updateUpload')->name('update.upload');
+    });
+
+    //Notification Setting
+    Route::name('setting.notification.')->controller('NotificationController')->prefix('notification')->group(function () {
+        //Template Setting
+        Route::get('global', 'global')->name('global');
+        Route::post('global/update', 'globalUpdate')->name('global.update');
+        Route::get('templates', 'templates')->name('templates');
+        Route::get('template/edit/{id}', 'templateEdit')->name('template.edit');
+        Route::post('template/update/{id}', 'templateUpdate')->name('template.update');
+
+        //Email Setting
+        Route::get('email/setting', 'emailSetting')->name('email');
+        Route::post('email/setting', 'emailSettingUpdate')->name('email.update');
+        Route::post('email/test', 'emailTest')->name('email.test');
+
+        //SMS Setting
+        Route::get('sms/setting', 'smsSetting')->name('sms');
+        Route::post('sms/setting', 'smsSettingUpdate')->name('sms.update');
+        Route::post('sms/test', 'smsTest')->name('sms.test');
     });
 });
